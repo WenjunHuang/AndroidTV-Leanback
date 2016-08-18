@@ -45,8 +45,8 @@
   <remove-node path="/api/package[@name='com.bumptech.glide.load.engine']/interface[@name='Resource']/method[@name='get' and count(parameter)=0]" />
   <remove-node path="/api/package[@name='com.bumptech.glide.load.resource.transcode']/interface[@name='ResourceTranscoder']/method[@name='transcode' and count(parameter)=1 and parameter[1][@type='com.bumptech.glide.load.engine.Resource&lt;Z&gt;']]" />
 <!--  <remove-node path="/api/package[@name='com.bumptech.glide.request.target']/interface[@name='Target']/method[@name='onResourceReady' and count(parameter)=2 and parameter[1][@type='R'] and parameter[2][@type='com.bumptech.glide.request.animation.GlideAnimation&lt;? super R&gt;']]" />-->
-    <remove-node path="/api/package[@name='com.bumptech.glide.request.target']/class[@name='SimpleTarget.SimpleTargetInvoker']" />
-    <remove-node path="/api/package[@name='com.bumptech.glide.request.target']/class[@name='ViewTargetInvoker']" />
+<!--    <remove-node path="/api/package[@name='com.bumptech.glide.request.target']/class[@name='SimpleTarget.SimpleTargetInvoker']" />-->
+<!--    <remove-node path="/api/package[@name='com.bumptech.glide.request.target']/class[@name='ViewTargetInvoker']" />-->
 <!--  <remove-node path="/api/package[@name='com.bumptech.glide.request.target']/class[@name='ImageViewTarget']/method[@name='setResource' and count(parameter)=1 and parameter[1][@type='Z']]" />-->
 <!--  <remove-node path="/api/package[@name='com.bumptech.glide.request.animation']/interface[@name='GlideAnimation.ViewAdapter']/method[@name='getView' and count(parameter)=0]" />-->
   <!--  <remove-node path="/api/package[@name='com.bumptech.glide.request.target']/class[@name='SquaringDrawable']" />-->

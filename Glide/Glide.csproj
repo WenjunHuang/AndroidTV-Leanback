@@ -49,7 +49,9 @@
     <Compile Include="Additions\GlideDrawableImageViewTarget.cs" />
     <Compile Include="Additions\ImageViewTarget.cs" />
     <Compile Include="Additions\NotificationTarget.cs" />
+    <Compile Include="Additions\SimpleTargetInvoker.cs" />
     <Compile Include="Additions\SquaringDrawable.cs" />
+    <Compile Include="Additions\ViewTargetInvoker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -11,9 +11,5 @@ namespace Com.Bumptech.Glide.Request.Target
             SetResource((Drawable)p0);    
         }
 
-        public override void OnResourceReady(Object p0, IGlideAnimation p1)
-        {
-            this.OnResourceReady();
-        }
     }
 }

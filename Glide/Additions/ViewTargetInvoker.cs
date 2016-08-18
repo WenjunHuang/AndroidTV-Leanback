@@ -5,7 +5,6 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
-using Android.Graphics;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
@@ -15,17 +14,8 @@ using Object = Java.Lang.Object;
 
 namespace Com.Bumptech.Glide.Request.Target
 {
-    public partial class BitmapImageViewTarget : IGlideAnimationViewAdapter
+    internal partial class ViewTargetInvoker
     {
-        protected override void SetResource(Object p0)
-        {
-            this.SetResource((Bitmap)p0);
-        }
-
-
-
-        View IGlideAnimationViewAdapter.View { get; }
-
         public override void OnResourceReady(Object p0, IGlideAnimation p1)
         {
             throw new NotImplementedException();
