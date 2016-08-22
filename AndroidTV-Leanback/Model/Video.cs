@@ -1,19 +1,9 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
-using Android.Content;
 using Android.Media;
 using Android.OS;
-using Android.Provider;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Object = Java.Lang.Object;
 
-namespace AndroidExample.TVLeanback.Module
+namespace AndroidExample.TVLeanback.Model
 {
     public sealed class Video : Java.Lang.Object, IParcelable
     {
@@ -26,7 +16,10 @@ namespace AndroidExample.TVLeanback.Module
         public string VideoUrl { get; set; }
         public string Studio { get; set; }
 
-        private Video() { }
+        private Video()
+        {
+        }
+
         private Video(Parcel parcel)
         {
             Id = parcel.ReadLong();
@@ -163,7 +156,6 @@ namespace AndroidExample.TVLeanback.Module
                     Studio = _studio
                 };
             }
-
         }
     }
 }

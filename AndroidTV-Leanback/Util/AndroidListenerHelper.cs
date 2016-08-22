@@ -5,6 +5,7 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Media;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
@@ -17,24 +18,39 @@ namespace AndroidExample.TVLeanback.Util
     {
         class ViewOnClickWrapper : Java.Lang.Object, View.IOnClickListener
         {
-            private Action<View> _action;
+            private readonly Action<View> _action;
 
             public ViewOnClickWrapper(Action<View> action)
             {
                 _action = action;
             }
-            public new void Dispose()
-            {
-                base.Dispose();
-            }
-
-            public new IntPtr Handle => base.Handle;
 
             public void OnClick(View v)
             {
                 _action(v);
             }
         }
+
+        class OnAudioFocusChangeWrapper : Java.Lang.Object, AudioManager.IOnAudioFocusChangeListener
+        {
+            private readonly Action<AudioFocus> _action;
+
+            public OnAudioFocusChangeWrapper(Action<AudioFocus> action)
+            {
+                _action = action;
+            }
+
+            public void OnAudioFocusChange(AudioFocus focusChange)
+            {
+                _action(focusChange);
+            }
+        }
+
+        public static AudioManager.IOnAudioFocusChangeListener AudioFocusChange(Action<AudioFocus> action)
+        {
+            return new OnAudioFocusChangeWrapper(action);
+        }
+
         public static View.IOnClickListener ViewOnClick(Action<View> action)
         {
             return new ViewOnClickWrapper(action);            
